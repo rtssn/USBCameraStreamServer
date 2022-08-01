@@ -9,5 +9,5 @@ ffmpeg -f v4l2 -thread_queue_size 16384 -s 640x480 -i /dev/video0 \
   -flags +cgop+loop-global_header \
   -bsf:v h264_mp4toannexb \
   -f hls \
-  -hls_time 10 -hls_list_size 10 -hls_allow_cache 0 -hls_flags delete_segments \
+  -hls_time 10 -hls_list_size 3 -hls_allow_cache 0 -hls_flags delete_segments \
   ./stream/stream.m3u8
